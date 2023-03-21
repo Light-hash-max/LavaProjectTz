@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: Grass
   m_EditorClassIdentifier: 
   Name: Grass
-  Prefab: {fileID: 6662174415517180126, guid: 81dad7d5552c9a341b390c79338fe0a4, type: 3}
+  Prefab: {fileID: 4432478943557836909, guid: 517bec1b6d0aa724f9bf2dda324a5c5e, type: 3}
+  SpotPrefab: {fileID: 6662174415517180126, guid: 81dad7d5552c9a341b390c79338fe0a4, type: 3}
   Icon: {fileID: 21300000, guid: 65f25f3657f87f74093b14f8cf9de94e, type: 3}

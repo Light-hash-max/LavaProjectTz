@@ -22,6 +22,7 @@ public class Attraction : MonoBehaviour
 
     private void OnEnable()
     {
+        _rigidbody.velocity = Vector3.zero;
         _isAvailable = false;
         _isAdded = false;
         StartCoroutine(AvalibaleTime());

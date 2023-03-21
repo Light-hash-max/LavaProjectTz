@@ -15,15 +15,19 @@ public class PlayerMovement : MonoBehaviour
     /// </summary>
     public event Action<bool> onStartAttacking = delegate { };
 
+
     /// <summary>
     /// Атакует ли перс
     /// </summary>
     public bool IsAttacking = false;
 
+    /// <summary>
+    /// Двигается ли перс
+    /// </summary>
+    public bool IsMoving => Joystick.Horizontal != 0 || Joystick.Vertical != 0;
+
     [field: SerializeField]
     public VariableJoystick Joystick { get; private set; } = default;
-
-    private bool _isMoving => Joystick.Horizontal != 0 || Joystick.Vertical != 0;
 
     private NavMeshAgent _navMeshAgent = default;
     private StateManager _stateManager = default;
@@ -38,10 +42,10 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        _movementPosition = _isMoving ? new Vector3(-Joystick.Horizontal, 0, -Joystick.Vertical) : Vector3.zero;
-        _stateManager.SwitchState(_isMoving ? _stateManager._walkingState : IsAttacking ? _stateManager._attackingState : _stateManager._idleState);
+        _movementPosition = IsMoving ? new Vector3(-Joystick.Horizontal, 0, -Joystick.Vertical) : Vector3.zero;
+        _stateManager.SwitchState(IsMoving ? _stateManager._walkingState : IsAttacking ? _stateManager._attackingState : _stateManager._idleState);
 
-        onStartAttacking(!_isMoving && IsAttacking);
+        onStartAttacking(!IsMoving && IsAttacking);
 
         _navMeshAgent.SetDestination(transform.position + _movementPosition);
     }

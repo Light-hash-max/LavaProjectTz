@@ -14,5 +14,7 @@ public class ResourceObject : ScriptableObject
     [field: SerializeField]
     public GameObject Prefab = default;
     [field: SerializeField]
+    public GameObject SpotPrefab = default;
+    [field: SerializeField]
     public Sprite Icon = default;
 }

@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Wood
   Prefab: {fileID: 2879593830112367787, guid: 6dd2ff6c019dfaa41a4c9460af21ce91, type: 3}
+  SpotPrefab: {fileID: 1595049218113169297, guid: 1ff459d4456242e4498127fa6eadb815, type: 3}
   Icon: {fileID: 21300000, guid: 17f146c444907534ebea9ceb33401445, type: 3}

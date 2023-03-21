@@ -14,4 +14,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: Crystal
   Prefab: {fileID: 1817994084988200799, guid: 74e785fbb3a799a4db1a09dba263faf3, type: 3}
+  SpotPrefab: {fileID: 827328117731581200, guid: b18d545ab897a2442aaa44fbb914dfa1, type: 3}
   Icon: {fileID: 21300000, guid: 2afc9d408b1461a4a96db1750b9e0fc6, type: 3}

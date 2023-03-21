@@ -26,14 +26,14 @@ public class ResoursesView : MonoBehaviour
             if (resourseView.ResourceName == resourceName)
             {
                 resourseView.gameObject.SetActive(true);
-                resourseView.UpdateView(_playerResources.ResourceObjects[resourceName][0].Icon, _playerResources.ResourceObjects[resourceName].Count.ToString());
+                resourseView.UpdateView(_playerResources.ResourceObjects[resourceName][0].Icon, _playerResources.ResourceObjects[resourceName].Count);
                 return;
             }
         }
 
         _currentResourseView = Instantiate(_resourseViewPrefab, transform);
         _currentResourseView.ResourceName = resourceName;
-        _currentResourseView.UpdateView(_playerResources.ResourceObjects[resourceName][0].Icon, _playerResources.ResourceObjects[resourceName].Count.ToString());
+        _currentResourseView.UpdateView(_playerResources.ResourceObjects[resourceName][0].Icon, _playerResources.ResourceObjects[resourceName].Count);
         _resourseViews.Add(_currentResourseView);
     }
 
@@ -54,11 +54,15 @@ public class ResoursesView : MonoBehaviour
 
     private void UpdateView()
     {
+        RemoveView();
+
         foreach (string resourceName in _playerResources.ResourceObjects.Keys)
         {
-            AddView(resourceName);
+            if (_playerResources.ResourceObjects[resourceName].Count > 0)
+            {
+                AddView(resourceName);
+            }
         }
 
-        RemoveView();
     }
 }

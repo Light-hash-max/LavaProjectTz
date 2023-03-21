@@ -15,7 +15,7 @@ public class ResourceSource : MonoBehaviour
     [field: SerializeField]
     public ResourceObject _resourceObject = default;
     [SerializeField]
-    private float _spawnTime = 1f;
+    private FloatValueSO _spawnTime = default;
     [SerializeField]
     private float _recoveryTime = 4f;
     [SerializeField]
@@ -29,7 +29,7 @@ public class ResourceSource : MonoBehaviour
     [SerializeField]
     private float[] _phasesScale = { 0.5f, 0.8f, 1f };
     [SerializeField]
-    private int _phasePrefabCount = 2;
+    private IntValueSO _phasePrefabCount = default;
     [SerializeField]
     private Transform _parent = default;
 
@@ -61,10 +61,10 @@ public class ResourceSource : MonoBehaviour
     {
         while (enabled && CurrentPhase > 0)
         {
-            yield return new WaitForSeconds(_spawnTime);
+            yield return new WaitForSeconds(_spawnTime.Value);
             GetResources();
             _currentPhaseNumber++;
-            if (_currentPhaseNumber >= _phasePrefabCount && CurrentPhase > 0)
+            if (_currentPhaseNumber >= _phasePrefabCount.Value && CurrentPhase > 0)
             {
                 DecreaseResource();
                 _currentPhaseNumber = 0;
@@ -117,13 +117,13 @@ public class ResourceSource : MonoBehaviour
     private void DecreaseResource()
     {
         CurrentPhase--;
-        LeanTween.scale(gameObject, Vector3.one * _phasesScale[CurrentPhase], _spawnTime / 2).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.scale(gameObject, Vector3.one * _phasesScale[CurrentPhase], 0.5f).setEase(LeanTweenType.easeInOutSine);
     }
 
     private void IncreaseResource()
     {
         CurrentPhase++;
-        LeanTween.scale(gameObject, Vector3.one * _phasesScale[CurrentPhase], _spawnTime / 2).setEase(LeanTweenType.easeInOutSine);
+        LeanTween.scale(gameObject, Vector3.one * _phasesScale[CurrentPhase], 0.5f).setEase(LeanTweenType.easeInOutSine);
     }
 
     /// <summary>

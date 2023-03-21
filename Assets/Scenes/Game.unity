@@ -2831,6 +2831,14 @@ PrefabInstance:
       propertyPath: _parent
       value: 
       objectReference: {fileID: 310816362}
+    - target: {fileID: 334608793, guid: 842bbfd15adf1d34f96cf63fa4741971, type: 3}
+      propertyPath: _spawnTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 029df171d26a5de4097a637ae04b23cc, type: 2}
+    - target: {fileID: 334608793, guid: 842bbfd15adf1d34f96cf63fa4741971, type: 3}
+      propertyPath: _phasePrefabCount
+      value: 
+      objectReference: {fileID: 11400000, guid: 7603fb64b9d3623468f2f1942364de2c, type: 2}
     - target: {fileID: 5135110680292844650, guid: 842bbfd15adf1d34f96cf63fa4741971, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -2912,6 +2920,14 @@ PrefabInstance:
       propertyPath: _radious
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 1184187631, guid: 6334c608c0c4d114ca40794da158d1cf, type: 3}
+      propertyPath: _spawnTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 5677e322741b96545af545c6f879dd21, type: 2}
+    - target: {fileID: 1184187631, guid: 6334c608c0c4d114ca40794da158d1cf, type: 3}
+      propertyPath: _phasePrefabCount
+      value: 
+      objectReference: {fileID: 11400000, guid: 7603fb64b9d3623468f2f1942364de2c, type: 2}
     - target: {fileID: 1524266776, guid: 6334c608c0c4d114ca40794da158d1cf, type: 3}
       propertyPath: m_NavMeshLayer
       value: 1
@@ -3119,6 +3135,14 @@ PrefabInstance:
       propertyPath: _parent
       value: 
       objectReference: {fileID: 310816362}
+    - target: {fileID: 1232019624, guid: 17589023d8c84c540aa218cc0da7282d, type: 3}
+      propertyPath: _spawnTime
+      value: 
+      objectReference: {fileID: 11400000, guid: 15aa4925ee57c024e8440affa00a2d8f, type: 2}
+    - target: {fileID: 1232019624, guid: 17589023d8c84c540aa218cc0da7282d, type: 3}
+      propertyPath: _phasePrefabCount
+      value: 
+      objectReference: {fileID: 11400000, guid: 7603fb64b9d3623468f2f1942364de2c, type: 2}
     - target: {fileID: 4534059531547330367, guid: 17589023d8c84c540aa218cc0da7282d, type: 3}
       propertyPath: m_Name
       value: CrystalSource
